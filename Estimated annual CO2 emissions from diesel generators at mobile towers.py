@@ -4,7 +4,7 @@ from sklearn.tree import export_graphviz
 import pandas as pd
 
 
-def save_decision_trees_as_png(clf, iteration, feature_name, target_name):
+def save_decision_trees_as_dot(clf, iteration, feature_name, target_name):
     file_name = open("emirhan_project" + str(iteration) + ".dot",'w')
     dot_data = export_graphviz(
         clf,
@@ -59,7 +59,7 @@ model.fit(X,y_n)
 
 
 #for i in range(len(model.estimators_)):
-    #save_decision_trees_as_png(model.estimators_[i], i, feature_names, target_names)
+    #save_decision_trees_as_dot(model.estimators_[i], i, feature_names, target_names)
     #print(i)
 
 
